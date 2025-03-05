@@ -1,10 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Amor ❤️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+        .heart {
+            font-size: 80px;
+            color: #ff6b6b;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        #message {
+            font-size: 24px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        button {
+            background-color: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff4757;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <div id="message">Não prometo nada se clicar aqui!</div>
+        <button onclick="changeMessage()">Clique aqui ♥</button>
+    </div>
+
+    <script>
+        const messages = [
+            "Te amo, malokera!",
+            "Casar com você amor ♥",
+            "Quando vejo a musa dnovo?",
+            "Digo nada, mas tô preparando uma surpresa 👀",
+            "Quero conhecer a sogra! kkkk"
+        ];
+
+        function changeMessage() {
+            const messageElement = document.getElementById('message');
+            const randomIndex = Math.floor(Math.random() * messages.length);
+            messageElement.textContent = messages[randomIndex];
+        }
+    </script>
 </body>
 </html>
